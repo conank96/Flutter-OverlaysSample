@@ -93,6 +93,7 @@ class FlutterOverlayWindow {
   static Stream<dynamic> get overlayListener {
     _overlayMessageChannel.setMessageHandler((message) async {
       _controller.add(message);
+      log("[StreamContrller] add Data");
       return message;
     });
     return _controller.stream;

@@ -29,8 +29,8 @@ class _TrueCallerOverlayState extends State<TrueCallerOverlay> {
   @override
   void initState() {
     super.initState();
-    FlutterOverlayWindow.overlayListener.listen((event) {
-      log("$event");
+    FlutterOverlayWindow.overlayListener.asBroadcastStream().listen((event) {
+      log("Listen Overlay: $event");
       setState(() {
         isGold = !isGold;
       });

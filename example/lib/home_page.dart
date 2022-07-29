@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     log("Started listening");
-    FlutterOverlayWindow.overlayListener.listen((event) {
-      log("$event");
+    FlutterOverlayWindow.overlayListener.asBroadcastStream().listen((event) {
+      log("ManhNQ - Flutter HomePage $event");
     });
   }
 
