@@ -108,6 +108,7 @@ public class OverlayService extends Service implements View.OnTouchListener {
             }
         });
         overlayMessageChannel.setMessageHandler((message, reply) -> {
+            Log.d("ManhNQ", "[Service]:----- ");
             WindowSetup.messenger.send(message);
         });
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_overlay_window_example/home_page.dart';
-import 'package:flutter_overlay_window_example/overlays/messanger_chathead.dart';
+import 'package:flutter_overlay_window_example/overlays/overlay.dart';
 
-import 'overlays/true_caller_overlay.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +14,7 @@ void overlayMain() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TrueCallerOverlay(),
+      home: OverlayScreen(),
     ),
   );
 }

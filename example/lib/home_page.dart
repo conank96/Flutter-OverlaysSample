@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     log("Started listening");
     FlutterOverlayWindow.overlayListener.asBroadcastStream().listen((event) {
-      log("ManhNQ - Flutter HomePage $event");
+      log("ManhNQ - [Flutter HomePage] $event");
     });
   }
 
@@ -57,6 +57,8 @@ class _HomePageState extends State<HomePage> {
                   alignment: OverlayAlignment.centerLeft,
                   visibility: NotificationVisibility.visibilityPrivate,
                   positionGravity: PositionGravity.auto,
+                  width: 150,
+                  height: 100
                 );
               },
               child: const Text("Show Overlay"),
